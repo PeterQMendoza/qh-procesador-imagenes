@@ -6,14 +6,14 @@
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=C%2B%2B&logoColor=white)
 ![CImg](https://img.shields.io/badge/CImg-c%2B%2B?style=for-the-badge&logo=C%2B%2B&logoColor=white&logoSize=auto&labelColor=blue&color=gray
 )
-![CMake](https://img.shields.io/badge/CMake-064F8C?logo=cmake&logoColor=fff)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=fff)
 
 Programa de procesador de imagenes
 
 ## Instalación
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/PeterQMendoza/qhawariy.git
+    git clone https://github.com/PeterQMendoza/qh-procesador-imagenes.git
 
 2. Ve al directorio del proyecto:
     ```bash
@@ -23,7 +23,7 @@ Programa de procesador de imagenes
     ```bash
     mkdir build
 
-4. Crea un directorio img dentro build/ y agrega una imagen (*.bmp):
+4. Agrega una imagen (*.bmp) dentro de build/img:
     ```bash
     cd build
     mkdir img
@@ -85,7 +85,7 @@ Para la corrección de errores, sigue este esquema de nomenclatura:
 3. El equipo debe usar el código en sus herramientas de seguimiento como Jira, Trello, o GitHub Issues.
 
 ### Convención de COMMITS en código de error:
--Codigó: 
+- Código: 
     ```bash
     git commit -m "Corrige BUG-AUTH-HIGH-003: Error de autenticación con credenciales válidas"
 
