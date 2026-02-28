@@ -1,5 +1,5 @@
 #include "str_invertir_colores.hpp"
 
-void EstrategiaInvertirColores::aplicar(CImg<unsigned char>& imagen) {
+void EstrategiaInvertirColores::aplicar(CImgU& imagen) {
     imagen.invert();
 }

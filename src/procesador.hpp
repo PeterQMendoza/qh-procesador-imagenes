@@ -1,22 +1,29 @@
 #include "i_operacion.hpp"
+#include "i_proveedor_imagen.hpp"
+#include "CImg.h"
+
 #include <memory>
 #include <vector>
 #include <string>
+#include <mutex>
 
-using namespace cimg_library;
 
-class Procesador {
+class Procesador final : public IProveedorImagen {
     private:
-        std::unique_ptr<CImg<unsigned char>> m_imagen;
+        mutable std::mutex m_mutex;
+        std::shared_ptr<CImgU> m_imagen;
         std::vector<std::unique_ptr<IOperacion>> m_operaciones;
     public:
-        Procesador(const std::string& dir, const std::string& file);
+        Procesador() = default;
+        ~Procesador() override = default;
 
-        void agregarOperacion(std::unique_ptr<IOperacion> op);
+        void cargar(const std::string& directorio, const std::string& archivo);
+
+        void agregarOperacion(std::unique_ptr<IOperacion> operacion);
 
         void ejecutar();
 
-        void mostrar();
+        void guardar(const std::string& ruta) const;
 
-        void guardar(const char* ruta);
+        std::shared_ptr<const CImgU> getImagenProcesada() const override;
 };

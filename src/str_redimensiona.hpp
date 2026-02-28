@@ -1,9 +1,13 @@
+#pragma once
+
 #include "i_operacion.hpp"
 
 class EstrategiaRedimensiona : public IOperacion {
     private:
-        int m_ancho, m_alto;
+        int m_maxAncho;
+        int m_maxAlto;
+        bool m_usarPadding;
     public:
-        EstrategiaRedimensiona(int w, int h);
-        void aplicar(CImg<unsigned char>& imagen) override;
+        EstrategiaRedimensiona(int maxW, int maxH, bool padding = false);
+        void aplicar(CImgU& imagen) override;
 };

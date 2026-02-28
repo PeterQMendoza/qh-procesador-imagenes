@@ -2,5 +2,5 @@
 
 class EstrategiaDetectorBorde : public IOperacion {
     public:
-        void aplicar(CImg<unsigned char>& imagen) override;
+        void aplicar(CImgU& imagen) override;
 };

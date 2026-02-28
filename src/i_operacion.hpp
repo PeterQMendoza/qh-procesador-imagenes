@@ -1,10 +1,10 @@
 #pragma once
 #include "CImg.h"
 
-using namespace cimg_library;
+using CImgU = cimg_library::CImg<unsigned char>;
 
 class IOperacion {
     public:
-        virtual void aplicar(CImg<unsigned char>& imagen) = 0;
+        virtual void aplicar(CImgU& imagen) = 0;
         virtual ~IOperacion() = default;
 };
